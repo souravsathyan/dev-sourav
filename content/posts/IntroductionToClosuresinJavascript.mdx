@@ -1,0 +1,44 @@
+---
+title: Introduction to Closures in Javascript
+summary: Generative AI is a fascinating field that allows computers to create new content, ranging from text and images to music and code. It's revolutionizing various industries, offering exciting possibilities.
+image: https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=600
+author: 'Sourav'
+publishedAt: '2024-08-12'
+---
+
+# JavaScript Closures: A Deep Dive
+
+A closure in JavaScript is a function that has access to variables from its surrounding scope (lexical environment), even after that scope has finished executing.  This means the inner function "remembers" the variables from its parent function, even after the parent function has returned.
+
+## How Closures Work
+
+Closures are created when an inner function is defined within an outer function, and the inner function is then returned from the outer function. The inner function maintains a reference to the variables in the outer function's scope, forming a closure.
+
+## Advantages of Closures
+
+* **Data Encapsulation:** Closures help in creating private variables.  Variables within the outer function's scope are not directly accessible from outside, enhancing data security.
+* **State Preservation:** Closures allow functions to maintain state between calls. This is useful for creating counters, timers, or other functions that need to remember their previous state.
+* **Currying and Partial Application:** Closures are fundamental to techniques like currying and partial application, which allow for creating more flexible and reusable functions.
+
+
+## Disadvantages of Closures
+
+* **Memory Management:** Closures can consume more memory than regular functions because they hold onto variables from their parent scope.  If not managed carefully, this can lead to memory leaks.
+* **Debugging Complexity:** Debugging closures can be more challenging than debugging regular functions due to their access to multiple scopes.
+
+
+## Example of a Closure
+
+```javascript
+function outerFunction() {
+  let outerVar = "Hello";
+  function innerFunction() {
+    console.log(outerVar); // innerFunction has access to outerVar
+  }
+  return innerFunction;
+}
+let myClosure = outerFunction();
+myClosure(); // Outputs "Hello" - even though outerFunction has finished executing
+```
+
+In this example, `innerFunction` is a closure.  It has access to `outerVar` from `outerFunction`, even after `outerFunction` has completed its execution.  This demonstrates the core concept of closures: maintaining access to variables from a parent scope.

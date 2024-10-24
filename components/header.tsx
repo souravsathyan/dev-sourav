@@ -4,13 +4,22 @@ import Link from 'next/link'
 import React from 'react'
 import ThemeToggle from './theme-toggle'
 
+/**
+ *
+ *
+ * @return {*} 
+ */
 function Header() {
   return (
     <header className='fixed inset-x-0 top-0 z-50 bg-background/75 py-6 backdrop-blur-sm'>
       <nav className='container flex max-w-3xl items-center justify-between'>
         <div>
-          <Link href={'/'} className='font-serif text-lg tracking-widest font-thin'>
-            s o u r a v
+          <Link
+            href={'/'}
+            style={{ fontFamily: 'Samarkan, sans-serif' }}
+            className='text-2xl font-thin tracking-widest'
+          >
+            sourav
           </Link>
         </div>
 

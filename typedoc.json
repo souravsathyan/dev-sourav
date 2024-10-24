@@ -1,0 +1,7 @@
+{
+  "entryPoints": ["app/page.tsx", "components/**/*.tsx"],  // Include your main entry and component files
+  "out": "docs",
+  "exclude": ["**/node_modules/**", "**/*.test.tsx", "**/*.test.ts"],  // Exclude test files
+  "excludePrivate": true,
+  "tsconfig": "tsconfig.json"
+}
