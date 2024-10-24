@@ -1,4 +1,5 @@
 import Intro from '@/components/intro'
+import RecentPosts from '@/components/recent-posts'
 import React from 'react'
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
       <div className='container max-w-3xl'>
         <h1 className='text-3xl font-bold'>
           <Intro />
+          <RecentPosts />
         </h1>
       </div>
     </section>
