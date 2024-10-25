@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
+// import { Toaster } from './ui/sonner'
 
 function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -10,8 +11,14 @@ function Providers({ children }: { children: React.ReactNode }) {
       attribute='class'
     >
       {children}
+      {/* <ToasterProvider /> */}
     </ThemeProvider>
   )
 }
+
+// function ToasterProvider() {
+//   const { resolvedTheme } = useTheme()
+//   return <Toaster position='top-right' theme={resolvedTheme === 'dark' ? 'dark' : 'light'} />
+// }
 
 export default Providers
