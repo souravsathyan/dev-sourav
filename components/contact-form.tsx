@@ -10,7 +10,6 @@ import { Input } from './ui/input'
 import { Textarea } from './ui/textarea'
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { sendMail } from '@/lib/actions'
 
 type Inputs = z.infer<typeof ContactFormSchema>
 
@@ -30,12 +29,20 @@ function ContactForm() {
   })
 
   const processForm: SubmitHandler<Inputs> = async data => {
-    const result = await sendMail(data)
-    if (result.error) {
-      toast.error('Something went wrong. Please try again later.')
-    }
+    const result = await fetch('/api/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
 
-    console.log(data)
+    const response = await result.json()
+
+    if (response.data.result.success === false) {
+      toast.error(response.data.result.message)
+      return
+    }
 
     toast.success(
       'Thank you for your message. We will get back to you shortly.'
@@ -92,7 +99,7 @@ function ContactForm() {
               </p>
             )}
           </div>
-          <div className='col-span-1 sm:col-span-2 mt-6'>
+          <div className='col-span-1 mt-6 sm:col-span-2'>
             <Button
               type='submit'
               disabled={isSubmitting}
