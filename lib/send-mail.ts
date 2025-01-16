@@ -1,6 +1,6 @@
 'use server'
 import { z } from 'zod'
-import { ContactFormSchema } from './schemas'
+import { ContactFormSchema, newsLetterFormSchema } from './schemas'
 import nodemailer from 'nodemailer'
 
 type ContactFormSchema = z.infer<typeof ContactFormSchema>
@@ -45,4 +45,13 @@ export async function sendMail(data: ContactFormSchema) {
   } catch (error) {
     return { success: false, error }
   }
+}
+
+export async function subscribeMail(data: { email: string }) {
+  const result = newsLetterFormSchema.safeParse(data)
+  if (result.error) {
+    return { error: result.error.format() }
+  }
+
+  return { success: true }
 }
