@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
 import { PostMetadata } from '@/lib/posts'
 import { useState } from 'react'
-import { Input } from './ui/input'
-import { Button } from './ui/button'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import Posts from './posts'
+import { Input } from '../ui/input'
+import { Button } from '../ui/button'
 
 export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
   const [query, setQuery] = useState('')

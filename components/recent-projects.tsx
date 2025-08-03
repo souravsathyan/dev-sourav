@@ -1,4 +1,4 @@
-import Posts from './posts'
+import Posts from './posts/posts'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import { getProjects } from '@/lib/projects'

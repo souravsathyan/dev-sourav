@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
+import { Toaster } from './ui/sonner'
 // import { Toaster } from './ui/sonner'
 
 function Providers({ children }: { children: React.ReactNode }) {
@@ -11,7 +12,7 @@ function Providers({ children }: { children: React.ReactNode }) {
       attribute='class'
     >
       {children}
-      {/* <ToasterProvider /> */}
+      <Toaster />
     </ThemeProvider>
   )
 }

@@ -1,4 +1,4 @@
-import PostsWithSearch from '@/components/posts-with-search'
+import PostsWithSearch from '@/components/posts/posts-with-search'
 import { getPosts } from '@/lib/posts'
 import React from 'react'
 

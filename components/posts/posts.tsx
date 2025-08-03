@@ -2,7 +2,7 @@ import { PostMetadata } from '@/lib/posts'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
 import React from 'react'
-import { Separator } from './ui/separator'
+import { Separator } from '../ui/separator'
 
 function Posts({ posts }: { posts: PostMetadata[] }) {
   return (

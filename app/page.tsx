@@ -3,6 +3,7 @@ import RecentPosts from '@/components/recent-posts'
 import React from 'react'
 import RecentProjects from '@/components/recent-projects'
 import NewsLetterForm from '@/components/news-letter-form'
+import ExperienceTimline from '@/components/ExpTimeline/exp-timeline'
 
 function Home() {
   return (
@@ -11,8 +12,9 @@ function Home() {
         <h1 className='text-3xl font-bold'>
           <Intro />
           <RecentPosts />
+          <ExperienceTimline />
           <RecentProjects />
-          <NewsLetterForm/>
+          <NewsLetterForm />
         </h1>
       </div>
     </section>

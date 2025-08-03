@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import React from 'react'
-import ThemeToggle from './theme-toggle'
+import ThemeToggle from '../theme-toggle'
 
 /**
  *
  *
- * @return {*} 
+ * @return {*}
  */
 function Header() {
   return (

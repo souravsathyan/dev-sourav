@@ -1,7 +1,7 @@
 import { getPosts } from '@/lib/posts'
-import Posts from './posts'
 import Link from 'next/link'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
+import Posts from './posts/posts'
 
 /**
  *
@@ -10,7 +10,7 @@ import { ArrowRightIcon } from '@radix-ui/react-icons'
  * @return {*}
  */
 export default async function RecentPosts() {
-  const posts = await getPosts(4)
+  const posts = await getPosts(3)
   return (
     <section className='mt-12 pb-24'>
       <div>
