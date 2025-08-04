@@ -5,13 +5,17 @@ import myProfilePic from '@/public/images/authors/dummy.jpg'
 function Intro() {
   return (
     <section className='flex flex-col-reverse items-center justify-center gap-x-10 gap-y-6 text-center md:flex-row md:items-center md:text-left'>
-      <div className='mt-2 flex-1 md:mt-0'>
+      <div className='flex-1 md:mt-0'>
         <h1 className='text-2xl font-bold no-underline sm:text-3xl md:text-4xl lg:text-5xl'>
-          Hey, I&apos;m Sourav
-          <span className='ml-2 text-base font-light text-sky-400/100 text-opacity-70 sm:text-lg md:text-xl'>
-            /saw·ruhv/
+          <span className='block leading-tight'>Hey,</span>
+          <span className='block leading-snug'>
+            I&apos;m Sourav
+            <span className='ml-2 text-base font-light text-sky-400/100 text-opacity-70 sm:text-lg md:text-xl'>
+              /saw·ruhv/
+            </span>
           </span>
         </h1>
+
         <p className='mt-3 text-sm font-light text-muted-foreground sm:text-base md:text-lg'>
           I&apos;m a software engineer based in Kerala, India. I&apos;m
           passionate about learning new technologies adn sharing knowledge with

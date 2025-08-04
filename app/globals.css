@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
   font-family: 'Samarkan';
   src: url('/font/SAMAN___.TTF') format('truetype');
@@ -51,13 +49,13 @@ body {
 
     --sh-identifier: #354150;
     --sh-keyword: #f47067;
-     --sh-string: #00a99a;
-      --sh-class: #8d85ff;
---sh-property: #4e8fdf;
---sh-entity: #6eafad;
---sh-jsxliterals: #bf7db6;
---sh-sign: #8996a3; 
---sh-comment: #a19595;
+    --sh-string: #00a99a;
+    --sh-class: #8d85ff;
+    --sh-property: #4e8fdf;
+    --sh-entity: #6eafad;
+    --sh-jsxliterals: #bf7db6;
+    --sh-sign: #8996a3;
+    --sh-comment: #a19595;
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -85,10 +83,10 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    --sh-class:#4c97f8;
-    --sh-identifier:#fff;
-    --sh-keyword:#f47067;
-    --sh-string:#0fa295;
+    --sh-class: #4c97f8;
+    --sh-identifier: #fff;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
   }
 }
 
@@ -99,20 +97,33 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  .title{
+  .title {
     @apply font-sans text-3xl font-bold underline decoration-border/75 decoration-2 underline-offset-8;
   }
 
-  .prose pre{
+  .prose pre {
     @apply overflow-x-auto rounded-lg bg-accent px-5 py-4 text-sm;
   }
 
-  .prose pre code{
+  .prose pre code {
     @apply p-0;
     line-height: 1;
   }
 
-  .prose code span{
+  .prose code span {
     @apply font-medium;
   }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) linear infinite;
+  animation-direction: var(--animation-direction, forwards);
 }

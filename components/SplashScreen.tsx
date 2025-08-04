@@ -33,7 +33,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
   }, [currentText, finishLoading, greetings.length])
 
   return (
-    <div className='flex h-screen w-full items-center justify-center bg-black'>
+    <div className='flex h-screen w-full items-center justify-center bg-white dark:bg-black'>
       <AnimatePresence mode='wait'>
         <motion.h1
           key={currentText}
@@ -41,7 +41,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className='text-xl font-bold text-white sm:text-4xl md:text-6xl'
+          className='text-xl font-bold text-black dark:text-white sm:text-4xl md:text-6xl'
         >
           {greetings[currentText]}
         </motion.h1>
