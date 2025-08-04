@@ -11,7 +11,6 @@ import { getProjects } from '@/lib/projects'
  */
 export default async function RecentProjects() {
   const posts = await getProjects(2)
-  console.log({ posts })
   return (
     <section className='mt-12 pb-24'>
       <div>
