@@ -17,9 +17,11 @@ function Intro() {
         </h1>
 
         <p className='mt-3 text-sm font-light text-muted-foreground sm:text-base md:text-lg'>
-          I&apos;m a software engineer based in Kerala, India. I&apos;m
-          passionate about learning new technologies adn sharing knowledge with
-          others
+          I&apos;m a developer based in Kerala, India, with experience in
+          building mobile and web apps for events, education, and service
+          platforms. I specialize in React Native and the MERN stack, and enjoy
+          creating clean UIs, improving performance, and delivering complete
+          products.
         </p>
       </div>
       <div className='relative'>
