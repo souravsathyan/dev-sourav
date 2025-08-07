@@ -19,7 +19,7 @@ export async function sendMail(data: ContactFormSchema) {
       secure: true,
       auth: {
         user: process.env.GMAIL,
-        pass: process.env.APP_KEY
+        pass: process.env.APP_PASS
       }
     })
 

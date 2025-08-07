@@ -1,7 +1,7 @@
 'use client'
 
 import { PostMetadata } from '@/lib/posts'
-import { useState } from 'react'
+import { useDeferredValue, useState } from 'react'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import Posts from './posts'
 import { Input } from '../ui/input'
@@ -9,8 +9,9 @@ import { Button } from '../ui/button'
 
 export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
   const [query, setQuery] = useState('')
+  const deferredQuery = useDeferredValue(query)
   const filtered = posts.filter(post =>
-    post.title?.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+    post.title?.toLocaleLowerCase().includes(deferredQuery.toLocaleLowerCase())
   )
 
   const isFiltered = query.length > 0

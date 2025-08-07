@@ -4,7 +4,7 @@ export type TimelineData = {
   location: string
   endDate: string
   position: string
-  achievement: string[]
+  achievement?: string[]
   skills: string[]
   totalExp?: string
 }
@@ -21,6 +21,14 @@ export const timelineData: TimelineData[] = [
     startDate: 'February 2024',
     endDate: 'present',
     skills: ['React Native', 'MERN', 'Git Version Control']
+  },
+  {
+    text: 'Freelance Developer',
+    position: 'Full Stack Developer',
+    location: 'Kochi, Ernakulam, Kerala',
+    startDate: 'March 2025',
+    endDate: 'present',
+    skills: ['React Native', 'MERN']
   },
   {
     text: 'Brototype',

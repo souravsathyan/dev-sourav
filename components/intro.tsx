@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import myProfilePic from '@/public/images/authors/dummy.jpg'
+import myProfilePic from '@/public/images/authors/me1.jpg'
 
 function Intro() {
   return (

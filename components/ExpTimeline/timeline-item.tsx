@@ -25,7 +25,7 @@ const TimelineItem = ({ item }: ItemProps) => {
       transition={{ duration: 1, ease: 'easeIn' }}
     >
       <ChevronRightIcon className='absolute -left-[9px] top-2.5 h-5 w-5' />
-      <Card className='ml-4 border-black/10 text-black dark:border-white/10 dark:text-white'>
+      <Card className='ml-4 max-w-screen-sm border-black/10 text-black dark:border-white/10 dark:text-white'>
         <CardHeader>
           <CardTitle className='text-lg'>{item.text}</CardTitle>
           <CardDescription className='mt-1 text-sm text-gray-600 dark:text-gray-300'>
